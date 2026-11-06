@@ -1,6 +1,6 @@
 # Homelab : mini-infrastructure d'entreprise virtualisée
 
-Projet personnel réalisé sous VirtualBox pour pratiquer l'administration systèmes et réseaux. **Statut : en cours.**
+Projet personnel réalisé sous VirtualBox pour pratiquer l'administration systèmes et réseaux. **Statut : terminé**
 
 ## Objectif
 Simuler le réseau d'une petite entreprise : un routeur-pare-feu, un contrôleur de domaine Windows, un poste client Windows 11 et un serveur Linux, répartis sur deux réseaux séparés.
@@ -29,9 +29,6 @@ Simuler le réseau d'une petite entreprise : un routeur-pare-feu, un contrôleur
 - **Windows 11 dans VirtualBox** : écran noir au démarrage et message TPM / Secure Boot. Résolu en réglant la VM sans EFI et en contournant la vérification à l'installation.
 - **Adresses IP et DNS incorrects sur le poste** : j'ai identifié, avec la ligne « Serveur DHCP » de `ipconfig /all`, que deux serveurs DHCP répondaient (OPNsense et Windows Server), puis j'ai désactivé celui d'OPNsense.
 - **GPO non appliquées** : diagnostic avec `gpresult /r`, vérification de l'unité d'organisation des comptes et des liens des GPO.
-
-## Prochaines étapes
-Terminer les GPO, installer le serveur Debian avec accès SSH par clé, puis segmenter les réseaux avec les règles OPNsense.
 
 ## Outils
 VirtualBox, OPNsense, Windows Server 2022, Windows 11, Debian, Active Directory, GPO, DNS, DHCP, SSH.
